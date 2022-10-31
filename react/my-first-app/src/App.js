@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Badge from './Badge';
+import Card from './Card';
+import Clock from './Clock';
+import Message from './Message';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container row">
+      <Card title="React JS"/>
+      <Card title="Angular JS"/>
+      <Card title="React JS"/>
+      <Card title="Angular JS"/>
+      <Card title="React JS"/>
+      <Card title="Angular JS"/>
+      {/* <Clock now={new Date()}></Clock>
+      <Badge caption="Inbox"></Badge>
+      <Badge caption="Sent"></Badge>
+      <Message text="abcd"></Message>
+      <Message text="pqrs"></Message> */}
     </div>
   );
 }
