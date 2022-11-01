@@ -20,5 +20,27 @@
       "salary": 555555,
       "id": 15
     }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "React"
+    },
+    {
+      "id": 3,
+      "title": "Angular"
+    },
+    {
+      "id": 2,
+      "title": "NodeJS"
+    },
+    {
+      "id": 4,
+      "title": ".NET"
+    },
+    {
+      "title": "EmberJS",
+      "id": 5
+    }
   ]
 }
