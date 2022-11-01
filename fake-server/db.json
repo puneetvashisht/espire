@@ -6,19 +6,14 @@
       "salary": 555555
     },
     {
-      "id": 13,
-      "name": "Priya",
-      "salary": 543433
+      "name": "Test",
+      "salary": "34344",
+      "id": 3
     },
     {
-      "name": "Sonia",
-      "salary": 434545,
-      "id": 14
-    },
-    {
-      "name": "Kinal",
-      "salary": 555555,
-      "id": 15
+      "name": "test123",
+      "salary": "1234",
+      "id": 4
     }
   ],
   "courses": [
@@ -41,6 +36,10 @@
     {
       "title": "EmberJS",
       "id": 5
+    },
+    {
+      "title": "EmberJS",
+      "id": 6
     }
   ]
 }
