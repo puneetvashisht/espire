@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './App.css';
 import Badge from './Badge';
+import BadgeWithClass from './BadgeWithClass';
 import Card from './Card';
 import Clock from './Clock';
 import Dropdown from './Dropdown';
@@ -20,7 +21,10 @@ function App() {
 
   return (
     <div className="container row">
-      <Dropdown/>
+       <Badge caption="Inbox"></Badge>
+       <BadgeWithClass caption="WithClass"></BadgeWithClass>
+      {/* <Dropdown/>
+      <Dropdown/> */}
       {/* {courseList} */}
       {/* <Card title="React JS"/>
       <Card title="Angular JS"/>

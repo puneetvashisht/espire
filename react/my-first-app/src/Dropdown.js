@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import DropdownItem from './DropdownItem'
 
 export default function Dropdown() {
 
@@ -16,7 +17,7 @@ export default function Dropdown() {
         setShow(false);
     }
 
-  let cuisineList =  cuisines.map((cuisine, i)=> <li><a className="dropdown-item" href="#" onClick={()=>changeCaption(cuisine)}>{cuisine}</a></li>)
+  let cuisineList =  cuisines.map((cuisine, i)=> <DropdownItem cuisine={cuisine} whenItemClick={changeCaption}></DropdownItem>)
   return (
     <div className="dropdown">
   <button onClick={toggleShow} className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
