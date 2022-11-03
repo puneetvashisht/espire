@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
-import {connect} from 'react-redux'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import * as actions from '../store/actions'
 
 const AddEmployee = (props) => {
     const [name, setName] = useState('')
@@ -10,8 +11,8 @@ const AddEmployee = (props) => {
         setName(e.target.value)
     }
     const addEmployee = () => {
-        console.log('Add employee.. ', name , salary)
-        props.onAddEmployee({id: 99, name, salary})
+        console.log('Add employee.. ', name, salary)
+        props.onAddEmployee({ name, salary })
     }
 
     return (
@@ -40,16 +41,16 @@ const AddEmployee = (props) => {
 //   }
 
 
-  const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
 
     return ({
-      onAddEmployee: (employee) => dispatch({type: 'ADD_EMPLOYEE', payload: employee })
+        onAddEmployee: (employee) => dispatch(actions.addEmployee(employee))
     })
-  }
+}
 
-  
-  
 
-  
-  export default connect(null, mapDispatchToProps)(AddEmployee);
-  
+
+
+
+export default connect(null, mapDispatchToProps)(AddEmployee);
+
