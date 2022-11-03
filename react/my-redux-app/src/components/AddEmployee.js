@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
+import {connect} from 'react-redux'
 
-export default function AddEmployee() {
+const AddEmployee = (props) => {
     const [name, setName] = useState('')
     const [salary, setSalary] = useState()
 
@@ -10,6 +11,7 @@ export default function AddEmployee() {
     }
     const addEmployee = () => {
         console.log('Add employee.. ', name , salary)
+        props.onAddEmployee({id: 99, name, salary})
     }
 
     return (
@@ -30,3 +32,24 @@ export default function AddEmployee() {
 
     )
 }
+
+// function mapDispatchToProps(dispatch) {
+//     return({
+//       sendTheAlert: () => {dispatch(ALERT_ACTION)}
+//     })
+//   }
+
+
+  const mapDispatchToProps = (dispatch) => {
+
+    return ({
+      onAddEmployee: (employee) => dispatch({type: 'ADD_EMPLOYEE', payload: employee })
+    })
+  }
+
+  
+  
+
+  
+  export default connect(null, mapDispatchToProps)(AddEmployee);
+  
