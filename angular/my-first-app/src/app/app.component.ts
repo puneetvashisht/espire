@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title: string = ''
   courses: Array<string> = ["React", "Angular", "NodeJS", "Java"]
- 
+  
+  handleEvent(title: string){
+    console.log('In a parent component method... ', title);
+    this.title = title;
+  }
 }

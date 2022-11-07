@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'app-badge',
@@ -6,11 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class BadgeComponent{
     @Input('caption')title: string = "Default"
+    @Output('itemClick') itemClick : EventEmitter<string> = new EventEmitter<string>();
     count: number = 0
 
     incrementCount(){
         console.log('incrementing..');
-        
+        this.itemClick.emit(this.title)
       this.count++
     }
 }

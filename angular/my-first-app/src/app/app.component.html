@@ -1,5 +1,10 @@
-<h2>Simple component</h2>
-<p>{{courses}}</p>
+<h2>Parent component</h2>
+<h2>{{title}}</h2>
+<!-- <p>{{courses}}</p> -->
 <!-- <app-badge caption="Votes"></app-badge>
 <app-badge caption="Inbox"></app-badge> -->
-<app-badge *ngFor="let c of courses" caption={{c}}></app-badge>
+<hr/>
+<app-badge *ngFor="let c of courses" (itemClick)="handleEvent($event)" caption={{c}}></app-badge>
+<hr/>
+
+<app-view-employees></app-view-employees>
