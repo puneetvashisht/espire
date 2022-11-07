@@ -1,2 +1,5 @@
 <h2>Simple component</h2>
-<app-badge></app-badge>
+<p>{{courses}}</p>
+<!-- <app-badge caption="Votes"></app-badge>
+<app-badge caption="Inbox"></app-badge> -->
+<app-badge *ngFor="let c of courses" caption={{c}}></app-badge>

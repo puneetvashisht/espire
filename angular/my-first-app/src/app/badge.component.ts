@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-badge',
     templateUrl: './badge.component.html' 
 })
 export class BadgeComponent{
-    title: string = "Default"
+    @Input('caption')title: string = "Default"
+    count: number = 0
 
+    incrementCount(){
+        console.log('incrementing..');
+        
+      this.count++
+    }
 }
