@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 import { Employee } from './employee';
 
 @Component({
@@ -8,14 +9,10 @@ import { Employee } from './employee';
 })
 export class ViewEmployeesComponent implements OnInit {
 
-  employees: Array<Employee> = [
-    {id: 2, name: 'Priya', salary: 34343},
-    {id: 34, name: 'Rahul', salary: 43433}
-  ];
-
-  constructor() { }
+  constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void {
+    this.employeeService.fetchEmployees();
   }
 
 }
