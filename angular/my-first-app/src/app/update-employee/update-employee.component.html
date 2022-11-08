@@ -1,0 +1,15 @@
+<div *ngIf="message" class="alert alert-success" role="alert">
+    {{message}}
+  </div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Name</span>
+    <input disabled="true" [value]="empname" #name (keyup)="0" type="text"  class="form-control" placeholder="Enter name" aria-label="Username" aria-describedby="basic-addon1" />
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Salary</span>
+    <input  [value]="empsalary" #salary (keyup)="0" type="number"  class="form-control" placeholder="Enter salary" aria-label="Username" aria-describedby="basic-addon1" />
+</div>
+<div class="input-group mb-3">
+   <button (click)="updateEmployee(name.value, salary.value)" class='btn btn-primary'>Update Employee</button>
+</div>

@@ -1,12 +1,22 @@
-<h2>Parent component</h2>
-<h2>{{title}}</h2>
+<nav>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">View Employees</a></li>
+    <li><a routerLink="/add" routerLinkActive="active" ariaCurrentWhenActive="page">Add Employee</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>
+
+<!-- <h2>Parent component</h2>
+<h2>{{title}}</h2> -->
 <!-- <p>{{courses}}</p> -->
 <!-- <app-badge caption="Votes"></app-badge>
 <app-badge caption="Inbox"></app-badge> -->
+<!-- <app-dropdown></app-dropdown>
 <hr/>
 <app-badge *ngFor="let c of courses" (itemClick)="handleEvent($event)" caption={{c}}></app-badge>
 <hr/>
 <app-add-employee></app-add-employee>
-<hr/>
+<hr/> -->
 
-<app-view-employees></app-view-employees>
+<!-- <app-view-employees></app-view-employees> -->

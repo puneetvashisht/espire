@@ -15,7 +15,7 @@
     <tbody>
       <tr *ngFor="let employee of employeeService.employees | search: name.value">
         <th scope="row">{{employee.id}}</th>
-        <td>{{employee.name | titlecase | endLetterCapital}}</td>
+        <td><a [routerLink]="'/update/' + employee.id" routerLinkActive="active" ariaCurrentWhenActive="page">{{employee.name | titlecase | endLetterCapital}}</a></td>
         <td>{{employee.salary}}</td>
         <td>{{today | date:'yy/MM'}}</td>
       </tr>

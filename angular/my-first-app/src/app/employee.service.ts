@@ -17,6 +17,11 @@ export class EmployeeService {
     })
   }
 
+  fetchEmployee(id: string | null){
+    return this.http.get('http://localhost:8000/employees/' + id)
+    
+  }
+
   addEmployee(employee: Employee){
     this.employees.push(employee);
     this.http.post('http://localhost:8000/employees', employee)
