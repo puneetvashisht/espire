@@ -10,6 +10,7 @@ import { Employee } from './employee';
 export class ViewEmployeesComponent implements OnInit {
 
   constructor(public employeeService: EmployeeService) { }
+  today: Date = new Date();
 
   ngOnInit(): void {
     this.employeeService.fetchEmployees();
